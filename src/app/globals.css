@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 248, 250, 252;
+  
+  /* Primary Colors */
+  --color-deep-blue: 30, 58, 138;
+  --color-soft-white: 248, 250, 252;
+  
+  /* Secondary Colors */
+  --color-teal: 13, 148, 136;
+  --color-warm-gray: 120, 113, 108;
+  
+  /* Accent Colors */
+  --color-amber: 245, 158, 11;
+  --color-rose: 225, 29, 72;
+  
+  /* Functional Colors */
+  --color-success: 16, 185, 129;
+  --color-warning: 251, 191, 36;
+  --color-error: 239, 68, 68;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 30, 58, 138;
+    --background-end-rgb: 17, 24, 39;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'Inter', 'Source Sans Pro', sans-serif;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold md:text-5xl;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    @apply text-3xl font-semibold md:text-4xl;
+    line-height: 1.2;
+  }
+  
+  h3 {
+    @apply text-2xl font-semibold md:text-3xl;
+    line-height: 1.2;
+  }
+  
+  h4 {
+    @apply text-xl font-medium md:text-2xl;
+    line-height: 1.2;
+  }
+  
+  h5 {
+    @apply text-lg font-medium md:text-xl;
+    line-height: 1.2;
+  }
+  
+  h6 {
+    @apply text-base font-medium md:text-lg;
+    line-height: 1.2;
+  }
+  
+  p {
+    @apply text-base md:text-lg;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-[rgb(var(--color-deep-blue))] text-white py-3 px-6 rounded hover:bg-opacity-90 transition-all;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-[rgb(var(--color-deep-blue))] text-[rgb(var(--color-deep-blue))] py-3 px-6 rounded hover:bg-[rgb(var(--color-deep-blue))] hover:bg-opacity-10 transition-all;
+  }
+  
+  .btn-text {
+    @apply text-[rgb(var(--color-deep-blue))] py-2 px-4 hover:underline transition-all;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .nav-link {
+    @apply text-[rgb(var(--color-deep-blue))] hover:underline transition-all;
+  }
+  
+  .nav-link-active {
+    @apply text-[rgb(var(--color-deep-blue))] font-medium underline;
+  }
+}
