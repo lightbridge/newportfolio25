@@ -97,11 +97,7 @@ export default function BlogPage() {
         </div>
       </div>
       
-      <Section
-        background="white"
-        id="blog-categories"
-        className="py-8 md:py-12"
-      >
+      <Section title="Blog Categories" background="white" id="blog-categories" className="py-16">
         <div className="flex flex-wrap gap-3 justify-center">
           {categories.map((category, index) => (
             <button
