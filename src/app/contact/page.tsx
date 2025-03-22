@@ -77,6 +77,7 @@ export default function ContactPage() {
       </div>
       
       <Section
+        title="Contact"
         background="white"
         id="contact-info"
       >
